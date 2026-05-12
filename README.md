@@ -1,6 +1,6 @@
 # dotfiles
 
-Personal macOS configuration by emre.
+Personal macOS configuration.
 
 ## Demo
 
@@ -14,7 +14,9 @@ https://github.com/user-attachments/assets/793e7eaa-7909-4086-8380-1fb7861f8780
 | [SketchyBar](https://github.com/FelixKratz/SketchyBar) | Custom menu bar |
 | [borders](https://github.com/FelixKratz/JankyBorders) | Active window border highlight |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System info on terminal launch |
+| [cmatrix](https://github.com/abishekvashok/cmatrix) | Matrix rain in terminal |
 | Zsh | Shell with custom prompt |
+
 
 ## Preview
 
