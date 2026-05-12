@@ -2,6 +2,10 @@
 
 Personal macOS configuration by emre.
 
+## Demo
+
+https://github.com/user-attachments/assets/793e7eaa-7909-4086-8380-1fb7861f8780
+
 ## Overview
 
 | Tool | Role |
@@ -77,6 +81,10 @@ PROMPT='%F{#b3e1a7}%n%f%F{#ffffff}@%f%F{#b3e1a7}%m%f %F{#ffffff}%~ %F{#ffffff}%%
 alias matrix='cmatrix -C green'
 export PATH="$HOME/.local/bin:$PATH"
 ```
+
+## Issues
+
+If you run into any problems, feel free to [open an issue](https://github.com/emreekici3/dotfiles/issues).
 
 ## Structure
 
