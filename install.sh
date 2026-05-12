@@ -140,9 +140,9 @@ echo -e "${GREEN}      ✓ .config → ~/.config${NC}"
 
 # ─── 4. borders, sketchybar, fastfetch ────────────────────────────────────────
 echo ""
-echo -e "${YELLOW}[4/5] Installing borders, sketchybar, fastfetch...${NC}"
+echo -e "${YELLOW}[4/5] Installing borders, sketchybar, fastfetch, cmatrix...${NC}"
 brew tap FelixKratz/formulae 2>/dev/null || true
-brew install borders sketchybar fastfetch
+brew install borders sketchybar fastfetch cmatrix
 echo -e "${GREEN}      ✓ Tools installed.${NC}"
 
 # ─── 5. Terminal theme ────────────────────────────────────────────────────────
