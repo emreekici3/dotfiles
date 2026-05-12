@@ -1,0 +1,73 @@
+[options]
+focus_follows_mouse = false
+mouse_follows_focus = false
+animation_speed = 15
+preset_column_widths = [0.50, 0.60, 0.70, 0.80, 0.90, 1.00]
+window_resize_cycle = false
+
+[padding]
+top = 12
+bottom = 12
+
+[bindings]
+window_focus_west = "ctrl + alt - ,"
+window_focus_east = "ctrl + alt - ."
+
+window_swap_west = "cmd + ctrl + alt - ,"
+window_swap_east = "cmd + ctrl + alt - ."
+
+window_resize = "ctrl + alt - ]"
+window_shrink = "ctrl + alt - ["
+
+window_fullwidth = "ctrl + alt - '"
+window_manage = "ctrl + alt - ;"
+
+quit = "ctrl + alt - q"
+
+[swipe]
+deceleration = 0.4
+sensitivity = 0.4
+continuous = false
+
+[swipe.gesture]
+fingers_count = 4
+direction = "Natural"
+
+[decorations.inactive.dim]
+opacity_night = -0.08
+
+[windows.appcleaner]
+title = ".*"
+bundle_id = "net.freemacsoft.AppCleaner"
+floating = true
+
+[windows.calculator]
+title = ".*"
+bundle_id = "com.apple.calculator"
+floating = true
+
+[windows.cleantool]
+title = ".*"
+bundle_id = "com.hegenberg.KeyboardCleanTool"
+floating = true
+
+[windows.quicktime]
+title = ".*"
+bundle_id = "com.apple.QuickTimePlayerX"
+floating = true
+
+[windows.finder-info]
+title = ".* Bilgisi"
+bundle_id = "com.apple.finder"
+floating = true
+
+[windows.music]
+title = ".*"
+bundle_id = "com.apple.Music"
+width = 0.75
+
+[windows.all]
+title = ".*"
+horizontal_padding = 6
+vertical_padding = 0
+width = 0.5

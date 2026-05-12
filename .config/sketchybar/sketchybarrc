@@ -1,0 +1,158 @@
+sketchybar --bar height=40 \
+               color=0x00000000 \
+               shadow=off \
+               position=top \
+               padding_left=24 \
+               padding_right=24
+
+sketchybar --add event window_changed
+
+# ── Clock ──────────────────────────────────────────────
+sketchybar --add item clock_label right \
+           --set clock_label \
+               update_freq=1 \
+               script='sketchybar --set clock_label label="$(date +"%H:%M")"' \
+               label.color=0xffffffff \
+               label.font="SF Pro:Semibold:16" \
+               label.padding_left=4 \
+               label.padding_right=10 \
+               background.drawing=off \
+               padding_left=0 \
+               padding_right=0
+
+
+sketchybar --add item clock_icon right \
+           --set clock_icon \
+               icon=􀐫 \
+               icon.color=0xff000000 \
+               icon.font="SF Pro:Regular:16" \
+               icon.padding_left=6 \
+               icon.padding_right=8 \
+               label.drawing=off \
+               background.drawing=on \
+               background.color=0xff9bd692 \
+               background.height=30 \
+               background.corner_radius=8 \
+               padding_left=0 \
+               padding_right=0
+
+sketchybar --add bracket clock_bracket clock_icon clock_label \
+           --set clock_bracket \
+               background.drawing=on \
+               background.color=0xff0D0B1A \
+               background.height=30 \
+               background.corner_radius=8 \
+               background.border_width=0 \
+               padding_right=16 \
+               background.border_color=0xff9bd692 \
+               background.border_width=2
+
+
+# ── Spacer ───────────────────────────────────────────────
+sketchybar --add item spacer1 right \
+           --set spacer1 \
+               width=12 \
+               background.drawing=off \
+               icon.drawing=off \
+               label.drawing=off
+
+# ── Battery ───────────────────────────────────────────
+sketchybar --add item battery_label right \
+           --set battery_label \
+               update_freq=60 \
+               script='sketchybar --set battery_label label="$(pmset -g batt | grep -o "[0-9]*%" | head -1)"' \
+               label.color=0xffffffff \
+               label.font="SF Pro:Semibold:16" \
+               label.padding_left=4 \
+               label.padding_right=10 \
+               background.drawing=off \
+               padding_left=0 \
+               padding_right=0
+
+sketchybar --add item battery_icon right \
+           --set battery_icon \
+               icon=􀛨 \
+               icon.color=0xff000000 \
+               icon.font="SF Pro:Regular:16" \
+               icon.padding_left=6 \
+               icon.padding_right=8 \
+               label.drawing=off \
+               background.drawing=on \
+               background.color=0xff9bd692 \
+               background.height=30 \
+               background.corner_radius=8 \
+               padding_left=0 \
+               padding_right=0
+
+sketchybar --add bracket battery_bracket battery_icon battery_label \
+           --set battery_bracket \
+               background.drawing=on \
+               background.color=0xff0D0B1A \
+               background.height=30 \
+               background.corner_radius=8 \
+               background.border_width=0 \
+               padding_right=16 \
+               background.border_color=0xff9bd692 \
+               background.border_width=2
+
+# ── Spacer ───────────────────────────────────────────────
+sketchybar --add item spacer2 right \
+           --set spacer2 \
+               width=12 \
+               background.drawing=off \
+               icon.drawing=off \
+               label.drawing=off
+
+# ── Volume ───────────────────────────────────────────────
+sketchybar --add item volume_label right \
+           --set volume_label \
+               script="$HOME/.config/sketchybar/plugins/volume.sh" \
+               label.color=0xffffffff \
+               label.font="SF Pro:Semibold:16" \
+               label.padding_left=4 \
+               label.padding_right=10 \
+               background.drawing=off \
+               padding_left=0 \
+               padding_right=0
+
+sketchybar --subscribe volume_label volume_change
+
+sketchybar --add item volume_icon right \
+           --set volume_icon \
+               icon=􀊩 \
+               icon.color=0xff000000 \
+               icon.font="SF Pro:Regular:16" \
+               icon.padding_left=6 \
+               icon.padding_right=8 \
+               label.drawing=off \
+               background.drawing=on \
+               background.color=0xff9bd692 \
+               background.height=30 \
+               background.corner_radius=8 \
+               padding_left=0 \
+               padding_right=0
+
+sketchybar --add bracket volume_bracket volume_icon volume_label \
+           --set volume_bracket \
+               background.drawing=on \
+               background.color=0xff0D0B1A \
+               background.height=30 \
+               background.corner_radius=8 \
+               background.border_width=0 \
+               padding_right=16 \
+               background.border_color=0xff9bd692 \
+               background.border_width=2
+
+# ── Windows ────────────────────────────────────────
+sketchybar --add item windows_trigger left \
+           --set windows_trigger \
+               script="$HOME/.config/sketchybar/plugins/windows.sh" \
+               update_freq=2 \
+               icon.drawing=off \
+               label.drawing=off \
+               background.drawing=off \
+               padding_left=0 \
+               padding_right=0
+
+sketchybar --subscribe windows_trigger front_app_switched space_change window_changed
+sketchybar --update
